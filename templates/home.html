@@ -1,6 +1,34 @@
-{% extends 'index.html' %}
+{% extends 'index.html' %} {% block content %}
+<h1>Bem-vindo à Livraria Online</h1>
+<p>
+  Explore o nosso acervo com uma vasta seleção de livros para todos os gostos.
+  Encontre seu próximo livro favorito!
+</p>
 
-{% block content %}
-<h1>Bem-vindo ao Meu Portfólio</h1>
-<p>Esta é a página inicial.</p>
+<div class="featured-books">
+  <h2>Livros em Destaque</h2>
+  <ul>
+    <li>
+      <img
+        src="{{ url_for('static', filename='aventuras_fantasticas.jpg') }}"
+        alt="Aventuras Fantásticas"
+      />
+      <div><strong>Aventuras Fantásticas</strong> - R$ 39,90</div>
+    </li>
+    <li>
+      <img
+        src="{{ url_for('static', filename='historia_do_mundo.jpg') }}"
+        alt="História do Mundo"
+      />
+      <div><strong>História do Mundo</strong> - R$ 59,90</div>
+    </li>
+    <li>
+      <img
+        src="{{ url_for('static', filename='romances_classicos.jpg') }}"
+        alt="Romances Clássicos"
+      />
+      <div><strong>Romances Clássicos</strong> - R$ 49,90</div>
+    </li>
+  </ul>
+</div>
 {% endblock %}

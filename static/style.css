@@ -1,31 +1,133 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 header {
-    background: #333;
+    background: #4a4a4a;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    opacity: 0.5;
 }
 
-main {
+.container {
+    max-width: 960px;
+    margin: 0 auto;
     padding: 20px;
 }
 
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.featured-books ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.featured-books li {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-books li:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featured-books img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.featured-books li:hover img {
+    transform: scale(1.1);
+}
+
+.featured-books div {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3498db;
+}
+
 footer {
-    background: #333;
+    background: #4a4a4a;
     color: #fff;
     text-align: center;
     padding: 10px 0;

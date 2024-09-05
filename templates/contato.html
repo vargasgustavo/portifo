@@ -1,6 +1,16 @@
-{% extends 'index.html' %}
-
-{% block content %}
+{% extends 'index.html' %} {% block content %}
 <h1>Contato</h1>
-<p>Formulário de contato.</p>
+<p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+<form class="contact-form" action="/enviar-mensagem" method="POST">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="message">Mensagem:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
 {% endblock %}
