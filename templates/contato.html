@@ -2,15 +2,23 @@
 <h1>Contato</h1>
 <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
 <form class="contact-form" action="/enviar-mensagem" method="POST">
-  <label for="name">Nome:</label>
-  <input type="text" id="name" name="name" required />
-
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="message">Mensagem:</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Enviar</button>
+  <div class="form-group">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="message">Mensagem:</label>
+    <textarea
+      id="message"
+      name="message"
+      class="form-control"
+      required
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {% endblock %}

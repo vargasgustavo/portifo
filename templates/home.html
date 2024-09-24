@@ -1,33 +1,45 @@
 {% extends 'index.html' %} {% block content %}
-<h1>Bem-vindo à Livraria Online</h1>
-<p>
+<h1 class="display-4">Bem-vindo à Livraria Online</h1>
+<p class="lead">
   Explore o nosso acervo com uma vasta seleção de livros para todos os gostos.
   Encontre seu próximo livro favorito!
 </p>
 
 <div class="featured-books">
   <h2>Livros em Destaque</h2>
-  <ul>
-    <li>
+  <ul class="list-unstyled d-flex flex-wrap justify-content-between">
+    <li class="card mb-3" style="width: 18rem">
       <img
         src="{{ url_for('static', filename='aventuras_fantasticas.jpg') }}"
+        class="card-img-top"
         alt="Aventuras Fantásticas"
       />
-      <div><strong>Aventuras Fantásticas</strong> - R$ 39,90</div>
+      <div class="card-body">
+        <h5 class="card-title">Aventuras Fantásticas</h5>
+        <p class="card-text">R$ 39,90</p>
+      </div>
     </li>
-    <li>
+    <li class="card mb-3" style="width: 18rem">
       <img
         src="{{ url_for('static', filename='historia_do_mundo.jpg') }}"
+        class="card-img-top"
         alt="História do Mundo"
       />
-      <div><strong>História do Mundo</strong> - R$ 59,90</div>
+      <div class="card-body">
+        <h5 class="card-title">História do Mundo</h5>
+        <p class="card-text">R$ 59,90</p>
+      </div>
     </li>
-    <li>
+    <li class="card mb-3" style="width: 18rem">
       <img
         src="{{ url_for('static', filename='romances_classicos.jpg') }}"
+        class="card-img-top"
         alt="Romances Clássicos"
       />
-      <div><strong>Romances Clássicos</strong> - R$ 49,90</div>
+      <div class="card-body">
+        <h5 class="card-title">Romances Clássicos</h5>
+        <p class="card-text">R$ 49,90</p>
+      </div>
     </li>
   </ul>
 </div>

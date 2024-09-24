@@ -1,4 +1,10 @@
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,11 +12,13 @@ body {
     color: #333;
 }
 
+main {
+    flex: 1;
+}
+
 header {
     background: #4a4a4a;
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
 }
 
 nav ul {
@@ -21,10 +29,6 @@ nav ul {
     justify-content: center;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
 nav a {
     color: #fff;
     text-decoration: none;
@@ -33,47 +37,32 @@ nav a {
 }
 
 nav a:hover {
-    opacity: 0.5;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+    opacity: 0.7;
 }
 
 h1 {
     font-size: 36px;
     color: #2c3e50;
-    margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.featured-books h2 {
+    margin-top: 20px;
 }
 
 .featured-books ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .featured-books li {
     background-color: #ecf0f1;
-    padding: 15px;
     border-radius: 8px;
     text-align: center;
-    max-width: 200px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-books li:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .featured-books img {
@@ -84,24 +73,20 @@ p {
     transition: transform 0.3s ease;
 }
 
+.featured-books li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .featured-books li:hover img {
     transform: scale(1.1);
 }
 
-.featured-books div {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
 .contact-form {
-    max-width: 600px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
 }
 
 .contact-form label {
-    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -114,7 +99,6 @@ p {
 }
 
 .contact-form button {
-    padding: 10px;
     background-color: #2980b9;
     color: white;
     border: none;
@@ -131,7 +115,4 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
